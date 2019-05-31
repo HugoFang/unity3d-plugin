@@ -275,10 +275,9 @@ public class Unity3dBuilder extends Builder implements SimpleBuildStep {
         finalArgLine = Util.replaceMacro(finalArgLine, vars);
         finalArgLine = Util.replaceMacro(finalArgLine, buildVariables);
 
-        // Unity does take the PWD as project path. Jenkins changes the PWD to the workspace in 2.150.3
-        /*if (!finalArgLine.contains("-projectPath")) {
+        if (!finalArgLine.contains("-projectPath")) {
             args.add("-projectPath", moduleRootRemote);
-        }*/
+        }
 
         args.add(QuotedStringTokenizer.tokenize(finalArgLine));
         return args;
