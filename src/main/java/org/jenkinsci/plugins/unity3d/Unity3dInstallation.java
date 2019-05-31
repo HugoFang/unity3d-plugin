@@ -102,11 +102,11 @@ public class Unity3dInstallation
         }
 
         public String getInvalidInstallMessage() {
-            return Messages.Unity3d_InvalidUnityHomeConfiguration(new File(home), path);
+            return "";
         }
 
         public String getParametrizedInstallMessage() {
-            return Messages.Unity3d_UnityHomeNotFullyExpanded(path);
+            return "";
         }
     }
 

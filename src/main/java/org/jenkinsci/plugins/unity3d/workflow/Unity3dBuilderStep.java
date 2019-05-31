@@ -24,7 +24,6 @@ import javax.annotation.CheckForNull;
 import org.jenkinsci.plugins.unity3d.Unity3dBuilder;
 import org.jenkinsci.plugins.unity3d.Unity3dInstallation;
 import org.jenkinsci.plugins.unity3d.Helper;
-import org.jenkinsci.plugins.unity3d.Messages;
 
 /**
  *
@@ -120,7 +119,7 @@ public class Unity3dBuilderStep extends AbstractStepImpl {
                 Helper.toIntegerSet(value);
                 return FormValidation.ok();
             } catch (RuntimeException re) {
-                return FormValidation.error(Messages.Unity3d_InvalidParamUnstableReturnCodes(value));
+                return FormValidation.error("");
             }
         }
 
